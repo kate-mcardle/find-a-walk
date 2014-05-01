@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>CheckAccountStatus</servlet-name>
+    <servlet-class>com.findawalk.server.CheckAccountStatusServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CheckAccountStatus</servlet-name>
+    <url-pattern>/checkAccountStatus</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateAccount</servlet-name>
+    <servlet-class>com.findawalk.server.CreateAccountServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CreateAccount</servlet-name>
+    <url-pattern>/createAccount</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.findawalk.server.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+        
+  <servlet>
+    <servlet-name>CreateWalk</servlet-name>
+    <servlet-class>com.findawalk.server.CreateWalkServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CreateWalk</servlet-name>
+    <url-pattern>/createWalk</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ZipSearch</servlet-name>
+    <servlet-class>com.findawalk.server.ZipSearchServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ZipSearch</servlet-name>
+    <url-pattern>/zipSearch</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>EditWalk</servlet-name>
+    <servlet-class>com.findawalk.server.EditWalkServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>EditWalk</servlet-name>
+    <url-pattern>/editWalk</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>ManageWalks</servlet-name>
+    <servlet-class>com.findawalk.server.ManageWalksServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ManageWalks</servlet-name>
+    <url-pattern>/manageWalks</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DeleteWalk</servlet-name>
+    <servlet-class>com.findawalk.server.DeleteWalkServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DeleteWalk</servlet-name>
+    <url-pattern>/deleteWalk</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SendMessage</servlet-name>
+    <servlet-class>com.findawalk.server.SendMessageServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SendMessage</servlet-name>
+    <url-pattern>/sendMessage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>EditProfile</servlet-name>
+    <servlet-class>com.findawalk.server.EditProfileServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>EditProfile</servlet-name>
+    <url-pattern>/editProfile</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>ChangePic</servlet-name>
+    <servlet-class>com.findawalk.server.ChangePicServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ChangePic</servlet-name>
+    <url-pattern>/changePic</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SearchWalks</servlet-name>
+    <servlet-class>com.findawalk.server.SearchWalksServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SearchWalks</servlet-name>
+    <url-pattern>/searchWalks</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RSVP</servlet-name>
+    <servlet-class>com.findawalk.server.RSVPServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>RSVP</servlet-name>
+    <url-pattern>/rsvp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AcceptRSVP</servlet-name>
+    <servlet-class>com.findawalk.server.AcceptRSVPServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AcceptRSVP</servlet-name>
+    <url-pattern>/acceptRSVP</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LeaveWalk</servlet-name>
+    <servlet-class>com.findawalk.server.LeaveWalkServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>LeaveWalk</servlet-name>
+    <url-pattern>/leaveWalk</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+</web-app>
